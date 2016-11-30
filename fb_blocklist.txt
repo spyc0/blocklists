@@ -1,0 +1,182 @@
+[Adblock Plus 2.0]
+! Checksum: 3hsDuRd0kYSTqvACOksOyQ
+! Version: 201611302311
+! Expires: 1 days
+! Title: Youtube: Other Annoyances
+! Homepage: http://youtube.adblockplus.me/
+! Removes all annotations in videos
+||youtube.com/annotations_invideo?$object-subrequest
+! HTML5 version
+youtube.com##.video-annotations
+! Removes sharing tab below videos
+||youtube.com/share_ajax?action_get_share_box=1&video_id=$xmlhttprequest
+youtube.com##.action-panel-trigger[role="button"][data-trigger-for="action-panel-share"]
+youtube.com##.yt-uix-button[data-trigger-for="action-panel-share"]
+
+[Adblock Plus 2.0]
+! Checksum: G8lsO4kkZE5lvCdFrlyiSw
+! Version: 201611302311
+! Expires: 1 days
+! Title: Youtube: Remove Youtube Suggestions
+! Homepage: http://youtube.adblockplus.me/
+! Removes video suggestions on video pages
+youtube.com##.watch-sidebar-body > #watch-related > .related-list-item > .related-video
+youtube.com##.watch-sidebar-body > #watch-related > .related-list-item
+! Removes recommended channels on home page, susbcriptions page and feed
+youtube.com##.home .branded-page-v2-secondary-col
+youtube.com##.feed .branded-page-v2-secondary-col
+youtube.com##.guide-builder-v2 .branded-page-v2-secondary-col
+youtube.com##.branded-page-v2-col-container > .branded-page-v2-col-container-inner > .branded-page-v2-secondary-col:last-child > .branded-page-box:first-child:last-child
+! Removes recommended and featured videos in the endscreen
+||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com
+youtube.com##.html5-endscreen-content
+youtube.com##.html5-endscreen
+! Removes related/featured/popular channels on channel pages
+youtube.com##.branded-page-v2-secondary-col > .branded-page-related-channels > .yt-uix-tooltip
+youtube.com##.branded-page-v2-secondary-col > .branded-page-related-channels > .yt-uix-tooltip + .branded-page-related-channels-list
+youtube.com##.branded-page-v2-col-container > .branded-page-v2-col-container-inner > .branded-page-v2-secondary-col:last-child > .branded-page-related-channels:first-child + .branded-page-box:last-child
+! "Subscribe to see more videos from this channel" on home page after watching some video of a channel
+youtube.com###channel-subscription-promo-in-feed
+
+[Adblock Plus 2.0]
+! Checksum: 0HWf7DsdEeUUEcP8Q7nz2w
+! Version: 201611302311
+! Expires: 1 days
+! Title: Youtube: Remove Comments
+! Homepage: http://youtube.adblockplus.me/
+! Removes comments on video pages
+||plus.googleapis.com^*/widget/render/comments?$subdocument,domain=youtube.com
+||apis.google.com^*/widget/render/comments?$subdocument,domain=youtube.com
+||youtube.com/live_chat_fragments_ajax?$xmlhttprequest
+youtube.com###watch-discussion
+youtube.com###watch7-sidebar-discussion
+
+[Adblock Plus 2.0]
+! Checksum: P9ExIjZrXg+UbTHv1kCuvg
+! Version: 201611302311
+! Expires: 1 days
+! Title: facebook news feed annoyances blocker
+! Homepage: http://facebook.adblockplus.me/
+! In news feed
+! "Upcoming Events" and "Most Shared On Page X"
+facebook.com##.fbMainStreamAttachment ._4hh
+! "Recently Released Albums"
+facebook.com##.fbMainStreamAttachment ._4hl
+! "Similar To Page X" (after liking a post in the news feed)
+facebook.com##.commentable_item + .mvs
+facebook.com##.commentable_item + div > .mvs
+facebook.com##div[id^="substream_"] > div > div > .mvm
+facebook.com##DIV[id^="substream_"] > DIV > DIV > DIV > .mbm > ._4_ck
+facebook.com##DIV[id^="substream_"] > DIV > DIV > DIV[data-ownerid^="u_"] > .mvm
+facebook.com##DIV[id^="substream_"] > DIV > DIV > DIV[data-ownerid^="u_"] > DIV > .mbm > ._4_ck
+facebook.com##DIV[id^="feed_stream_"] > DIV[id^="js_"] > DIV > DIV > DIV[data-ownerid^="u_"] > .mvm
+facebook.com##DIV[id^="substream_"] ._2bex > .mbm > ._4_ck
+facebook.com###pagelet_group_ .mbm > ._4_ck
+! "Suggestions" below a post
+facebook.com##.userContentWrapper > ._5pax > DIV > .mvs
+! "Page X is posting about Page Y", "Page X is similar to Pages you like" and "Trending about Page X"
+facebook.com##.storyContent > .storyUnconnectedPost
+! "Games You May Like" (new Facebook news feed)
+facebook.com##.mbm._6nl + .uiList > ._6n2
+facebook.com##.mbm._6nl
+facebook.com##._5pcr > .mbm._43rz
+facebook.com##._5pcr > .mbm._43rz + ._43r-
+facebook.com##.mbm._43rz + .uiList > ._43s1
+facebook.com##.mbm._43rz + .uiList + .uiList
+facebook.com##.mbm > ._5pcr > .mbs + ._43r- > .uiList
+facebook.com##.mbm > ._5pcr > .mbs
+facebook.com##DIV[id^="topnews_main_stream_"] .userContentWrapper > ._1dwg > ._5x46 > A[href="https://www.facebook.com/games/"]
+facebook.com##DIV[id^="topnews_main_stream_"] .userContentWrapper > ._1dwg ._50z3 > ._50zm
+facebook.com##DIV[id^="topnews_main_stream_"] .userContentWrapper > ._1dwg > ._5x46 > ._3dp._29k > DIV > ._5pbw > .fsl.fwb.fcb
+facebook.com##DIV[id^="topnews_main_stream_"] .userContentWrapper > ._1dwg > ._5x46 > ._3dp._29k > DIV > ._5pbw + .uiLinkSubtle[href="https://www.facebook.com/games/"]
+! "People you may know"
+facebook.com###stream_pagelet > #pagelet_composer + ._4-u2._2ph_._3-95
+
+[Adblock Plus 2.0]
+! Checksum: WWu2B9TfMqRcF+mhKtsOWA
+! Version: 201611302311
+! Expires: 1 days
+! Title: facebook sidebar blocker
+! Homepage: http://facebook.adblockplus.me/
+! Right sidebar
+! Various suggestions/recommendations
+facebook.com##.home_right_column .ego_column.egoOrganicColumn
+facebook.com###globalContainer .ego_column._8_9.egoOrganicColumn
+facebook.com###rightCol .ego_column.egoOrganicColumn
+! "Trending" box
+facebook.com###pagelet_trending_tags_and_topics
+! "Featured Music Services" (Music feed)
+facebook.com###music_services
+! "Games Your Friends Are Playing" (Games feed)
+facebook.com##.rightColumnWrapper > ._5ksw
+facebook.com##.rightColumnWrapper > ._5ms_
+! "Game requests/invitations" 
+facebook.com##.rightColumnWrapper .fbRemindersRemove + #custom_reminders_link[data-gt*="\"appid\":\""]
+! "Recommended games"
+facebook.com###pagelet_games_rhc
+
+[Adblock Plus 2.0]
+! Checksum: qLlwzX87Zfvb5AD6wjgPUw
+! Version: 201611302311
+! Expires: 1 days
+! Title: facebook annoyances blocker
+! Homepage: http://facebook.adblockplus.me/
+! Right sidebar
+! Various suggestions/recommendations
+facebook.com##.home_right_column .ego_column.egoOrganicColumn
+facebook.com###globalContainer .ego_column._8_9.egoOrganicColumn
+facebook.com###rightCol .ego_column.egoOrganicColumn
+! "Trending" box
+facebook.com###pagelet_trending_tags_and_topics
+! "Featured Music Services" (Music feed)
+facebook.com###music_services
+! "Games Your Friends Are Playing" (Games feed)
+facebook.com##.rightColumnWrapper > ._5ksw
+facebook.com##.rightColumnWrapper > ._5ms_
+! "Game requests/invitations" 
+facebook.com##.rightColumnWrapper .fbRemindersRemove + #custom_reminders_link[data-gt*="\"appid\":\""]
+! "Recommended games"
+facebook.com###pagelet_games_rhc
+! In news feed
+! "Upcoming Events" and "Most Shared On Page X"
+facebook.com##.fbMainStreamAttachment ._4hh
+! "Recently Released Albums"
+facebook.com##.fbMainStreamAttachment ._4hl
+! "Similar To Page X" (after liking a post in the news feed)
+facebook.com##.commentable_item + .mvs
+facebook.com##.commentable_item + div > .mvs
+facebook.com##div[id^="substream_"] > div > div > .mvm
+facebook.com##DIV[id^="substream_"] > DIV > DIV > DIV > .mbm > ._4_ck
+facebook.com##DIV[id^="substream_"] > DIV > DIV > DIV[data-ownerid^="u_"] > .mvm
+facebook.com##DIV[id^="substream_"] > DIV > DIV > DIV[data-ownerid^="u_"] > DIV > .mbm > ._4_ck
+facebook.com##DIV[id^="feed_stream_"] > DIV[id^="js_"] > DIV > DIV > DIV[data-ownerid^="u_"] > .mvm
+facebook.com##DIV[id^="substream_"] ._2bex > .mbm > ._4_ck
+facebook.com###pagelet_group_ .mbm > ._4_ck
+! "Suggestions" below a post
+facebook.com##.userContentWrapper > ._5pax > DIV > .mvs
+! "Page X is posting about Page Y", "Page X is similar to Pages you like" and "Trending about Page X"
+facebook.com##.storyContent > .storyUnconnectedPost
+! "Games You May Like" (new Facebook news feed)
+facebook.com##.mbm._6nl + .uiList > ._6n2
+facebook.com##.mbm._6nl
+facebook.com##._5pcr > .mbm._43rz
+facebook.com##._5pcr > .mbm._43rz + ._43r-
+facebook.com##.mbm._43rz + .uiList > ._43s1
+facebook.com##.mbm._43rz + .uiList + .uiList
+facebook.com##.mbm > ._5pcr > .mbs + ._43r- > .uiList
+facebook.com##.mbm > ._5pcr > .mbs
+facebook.com##DIV[id^="topnews_main_stream_"] .userContentWrapper > ._1dwg > ._5x46 > A[href="https://www.facebook.com/games/"]
+facebook.com##DIV[id^="topnews_main_stream_"] .userContentWrapper > ._1dwg ._50z3 > ._50zm
+facebook.com##DIV[id^="topnews_main_stream_"] .userContentWrapper > ._1dwg > ._5x46 > ._3dp._29k > DIV > ._5pbw > .fsl.fwb.fcb
+facebook.com##DIV[id^="topnews_main_stream_"] .userContentWrapper > ._1dwg > ._5x46 > ._3dp._29k > DIV > ._5pbw + .uiLinkSubtle[href="https://www.facebook.com/games/"]
+! "People you may know"
+facebook.com###stream_pagelet > #pagelet_composer + ._4-u2._2ph_._3-95
+! Other
+! All recommendations in the right sidebar but when viewing an image in gallery view 
+facebook.com##.photoUfiContainer .ego_column.egoOrganicColumn
+! "Like Your Favorite Pages" (Pages feed)
+facebook.com##.megaphone_location_pages_feed
+! Right sidebar on app/game pages
+apps.facebook.com###rightCol
+! "People You May Know" on profile page
+facebook.com###pagelet_pymk_timeline
